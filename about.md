@@ -4,15 +4,12 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+# {{ site.title }}
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+{{ site.description }}
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+[//]: # (Delete this line and everything below in production.)
 
+The title and description of the podcast will automatically appear on this page. You can customize this page however you want to.
 
-[jekyll-organization]: https://github.com/jekyll
+For more info on how to work with this template visit the [readme]({{ site.baseurl }}/readme) page.
