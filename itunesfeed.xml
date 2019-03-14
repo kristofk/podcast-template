@@ -1,0 +1,86 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <atom:link href="{{ site.url }}/standardfeed.xml" rel="self" type="application/rss+xml" />
+    <title>{{ site.title }}</title>
+    <link>{{ site.url }}</link>
+    <description>{{ site.description }}</description>
+    <language>{{ site.language }}</language>
+    <copyright>© {{ site.time | date: '%Y' }} {{ site.title }}, All rights reserved.</copyright>
+
+  {% if site.managingEditor != blank %}
+    <managingEditor>{{ site.managingEditor }}{% if site.managingEditorName %} ({{ site.managingEditorName}}){% endif %}</managingEditor>
+  {% endif %}
+
+  {% if site.webMaster %}
+    <webMaster>{{ site.webMaster }}{% if site.webMasterName %} ({{ site.webMasterName}}){% endif %}</webMaster>
+  {% endif %} 
+
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <category>{{ site.category }}</category>
+    <generator>https://github.com/kristofk/podcast-template</generator>
+    <docs>https://github.com/kristofk/podcast-template/wiki</docs>
+    <image>
+      <url>{{ site.url }}/assets/artwork.jpg</url>
+      <title>{{ site.title }}</title>
+      <link>{{ site.url }}</link>
+    </image>
+
+    <!-- iTunes tags -->
+  {% if site.itunesType %}
+    <itunes:type>{{ site.itunesType }}</itunes:type>
+  {% endif %}
+    <itunes:subtitle>{{ site.description }}</itunes:subtitle>
+    <itunes:summary>{{ site.desctription }}</itunes:summary>
+    <itunes:author>{{ site.author }}</itunes:author>
+  {% if site.itunesBlock %}
+      <itunes:block>{{ site.itunesBlock }}</itunes:block>
+  {% endif %}
+      <itunes:category>{{ site.category }}</itunes:category>
+  {% if site.itunesComplete %}
+      <itunes:complete>{{ site.itunesComplete }}</itunes:complete>
+  {% endif %}
+      <itunes:explicit>{{ site.explicit }}</itunes:explicit>
+      <itunes:image href="{{ site.url }}/assets/artwork.jpg"/>
+  {% if site.newFeedUrl %}
+      <itunes:new-feed-url>{{ site.itunesNewFeedUrl }}</itunes:new-feed-url>
+  {% endif %}
+      <itunes:owner>
+        <itunes:name>{{ site.itunesOwnerName }}</itunes:name>
+        <itunes:email>{{ site.itunesOwnerEmail }}</itunes:email>
+      </itunes:owner>  
+
+  {% for post in site.posts %}
+      <item>
+        <title>{{ post.title  }}</title>
+        <link>{{ site.url }}{{ post.url }}</link>
+        <description>{{ post.subtitle }}></description>
+        <author>{{ site.authorEmail }} ({{ site.title }})</author>
+        <category>{{ site.category }}</category>
+        <enclosure url="{{ site.url }}{{ post.file }}" length="{{ post.length }}" type="audio/mpeg"/>
+        <guid>{{ site.url }}{{ post.url }}</guid>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <content:encoded><![CDATA[{{ post.content }}]]></content:encoded>
+
+        <!-- iTunes tags -->
+        <itunes:subtitle>{{ post.subtitle }}</itunes:subtitle>
+        <itunes:summary>{{ post.subtitle }}</itunes:summary>
+        <itunes:title>{{ post.title }}</itunes:title>
+        <itunes:author>{{ site.title }}</itunes:author>
+        <itunes:block>{{ post.itunesBlock }}</itunes:block>
+        <itunes:duration>{{ post.duration }}</itunes:duration>
+        <itunes:episode>{{ post.episodeNumber }}</itunes:episode>
+        <itunes:episodeType>{{ post.episodeType }}</itunes:episodeType>
+        <itunes:explicit>{{ post.explicit }}</itunes:explicit>
+        <itunes:image href="{{ site.url }}/assets/artwork.jpg"/>
+        <itunes:isClosedCaptioned>{{ post.isClosedCaptioned }}</itunes:isClosedCaptioned>
+        <itunes:season>{{ post.season }}</itunes:season>
+      </item>
+  {% endfor %}
+    </channel>
+  </rss>
