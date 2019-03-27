@@ -14,7 +14,7 @@ webMasterName:
 webMasterEmail: 
 category: Technology
 imageLinkType: relative
-image: /assets/artwork.jpg
+image: https://res.cloudinary.com/kristofk-com/image/upload/v1553722863/EPodcast/artwork.jpg
 
 # iTunes Properties
 itunesType: episodeic # recommended, [episodic/serial]
@@ -25,8 +25,8 @@ itunesBlock: # [yes]
 itunesCategory: Technology # recommended
 itunesComplete: # [yes]
 itunesExplicit: clean # recommended, [clean/explicit]
-itunesImageLinkType: relative # [relative/absolute]
-itunesImage: /assets/artwork.jpg # recommended
+itunesImageLinkType: absolute # [relative/absolute]
+itunesImage: https://res.cloudinary.com/kristofk-com/image/upload/v1553722863/EPodcast/artwork.jpg # recommended
 itunesNewFeedUrl:
 itunesOwnerName: Kristof Kocsis # recommended
 itunesOwnerEmail: appleContact@email.com # recommended
