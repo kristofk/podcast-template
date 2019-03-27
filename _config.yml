@@ -14,7 +14,7 @@ webMasterName:
 webMasterEmail: 
 category: Technology
 imageLinkType: relative
-image: /assets/artwork.jpg
+image: https://res.cloudinary.com/kristofk-com/image/upload/v1553722863/EPodcast/artwork.jpg
 
 # iTunes Properties
 itunesType: episodeic # recommended, [episodic/serial]

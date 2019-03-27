@@ -20,7 +20,7 @@ itunesSeason: 1
 itunesEpisodeType: full
 itunesExplicit: clean
 itunesImageLinkType: relative
-itunesImage: /assets/artwork.jpg
+itunesImage: https://res.cloudinary.com/kristofk-com/image/upload/v1553722863/EPodcast/artwork.jpg
 
 # Audio file properties
 audioFileLinkType: absolute
