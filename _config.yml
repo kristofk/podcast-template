@@ -32,8 +32,8 @@ itunesOwnerName: Kristof Kocsis # recommended
 itunesOwnerEmail: appleContact@email.com # recommended
 
 # Jekyll Properties
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/podcast-template" # the subpath of your site, e.g. /blog
+url: "https://kristofk.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Other info
 email: epodcast@email.com # REQUIRED
