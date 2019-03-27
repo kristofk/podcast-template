@@ -35,7 +35,7 @@
     <description>{{ post.subtitle }}></description>
     <author>{{ site.authorEmail }} ({{ site.title }})</author>
     <category>{{ site.category }}</category>
-    <enclosure url="{{ site.url }}{{ post.file }}/" length="{{ post.length }}" type="audio/mpeg"/>
+    <enclosure url="{{ site.url }}{{ post.file }}" length="{{ post.length }}" type="audio/mpeg"/>
     <guid>{{ site.url }}{{ post.url }}</guid>
     <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 <content:encoded><![CDATA[{{ post.content }}]]></content:encoded>
