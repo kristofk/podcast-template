@@ -1,20 +1,47 @@
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# These are used to personalize your new site.
+# Some of these are required, optional or recommended
+# "[]" are options to choose from
+# Read more here: https://github.com/kristofk/podcast-template/wiki/Site-Properties
 
-title: Podcast Title
-email: # If your podcast has an email you can enter it here
-description: >- # this means to ignore newlines until "baseurl:"
-  In this podcast I talk.
-  I talk about things.
+# RSS 2.0 Properties
+title: # REQUIRED
+description: # REQUIRED 
+language: 
+managingEditorName: 
+managingEditorEmail: 
+webMasterName: 
+webMasterEmail: 
+category: 
+imageLinkType: 
+image: 
+
+# iTunes Properties
+itunesType: # recommended, [episodic/serial]
+itunesSubtitle: # recommended
+itunesSummary: # recommended
+itunesAuthor: # recommended
+itunesBlock: # [yes]
+itunesCategory: # recommended
+itunesComplete: # [yes]
+itunesExplicit: # recommended, [clean/explicit]
+itunesImageLinkType: # [relative/absolute]
+itunesImage: # recommended
+itunesNewFeedUrl:
+itunesOwnerName: # recommended
+itunesOwnerEmail: # recommended
+
+# Jekyll Properties
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: # If your podcast has a twitter account, you can enter it here
-github_username: # A podcast usually isn't connected to Github, but since this is Jekyll, who know.
+
+# Other info
+email: # REQUIRED
+twitter_username: 
+github_username: # A podcast usually isn't connected to Github, but since this is Jekyll, who knows.
 
 # Build settings
+permalink: /episodes/:slug
 markdown: kramdown
 theme: minima
 plugins:
