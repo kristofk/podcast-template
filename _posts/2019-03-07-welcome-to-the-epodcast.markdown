@@ -1,32 +1,32 @@
 ---
 # Jekyll properties
-layout:
-slug:
+layout: post
+slug: /1
 
 # RSS 2.0 properties
-title:
-description:
+title: Welcome to the EPodcast
+description: The pilot episode of EPodcast
 authorName:
 authorEmail:
 comments: 
-date: # e.g. 2019-03-07 13:54:00 +0100
+date: 2019-03-07 13:54:00 +0100
 
 # iTunes properties
-itunesSubtitle:
-itunesSummary:
+itunesSubtitle: Pilot episode
+itunesSummary: Kristof introduces himself, the podcast and this cool podcast-template.
 itunesBlock:
-itunesEpisode:
-itunesSeason:
-itunesEpisodeType:
-itunesExplicit:
-itunesImageLinkType:
-itunesImage:
+itunesEpisode: 1
+itunesSeason: 1
+itunesEpisodeType: full
+itunesExplicit: clean
+itunesImageLinkType: relative
+itunesImage: /assets/artwork.jpg
 
 # Audio file properties
-audioFileLinkType:
-audioFile:
-duration:  # e.g. 19:33
-length: # e.g. 1173
+audioFileLinkType: relative
+audioFile: /audio-files/1-welcome-to-the-epodcast.mp3
+duration:  19:33
+length: 1173
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat ac felis donec et odio pellentesque diam volutpat commodo. Aliquet sagittis id consectetur purus. Ultrices gravida dictum fusce ut placerat. Ultrices tincidunt arcu non sodales. Nunc faucibus a pellentesque sit amet. Orci dapibus ultrices in iaculis. Nisi porta lorem mollis aliquam ut porttitor. Varius duis at consectetur lorem. Duis tristique sollicitudin nibh sit amet commodo nulla. Pellentesque adipiscing commodo elit at imperdiet dui accumsan. Lectus mauris ultrices eros in cursus. Faucibus vitae aliquet nec ullamcorper sit amet risus. Diam donec adipiscing tristique risus. Felis donec et odio pellentesque diam volutpat commodo sed. Arcu ac tortor dignissim convallis aenean et tortor. Nunc congue nisi vitae suscipit tellus mauris. Mattis nunc sed blandit libero volutpat sed cras. Libero volutpat sed cras ornare arcu dui vivamus arcu. Cras tincidunt lobortis feugiat vivamus at augue eget.

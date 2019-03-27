@@ -5,39 +5,39 @@
 # Read more here: https://github.com/kristofk/podcast-template/wiki/Site-Properties
 
 # RSS 2.0 Properties
-title: # REQUIRED
-description: # REQUIRED 
-language: 
+title: EPodcast
+description: An example on how to use this Podcast-template.
+language: en
 managingEditorName: 
 managingEditorEmail: 
 webMasterName: 
 webMasterEmail: 
-category: 
-imageLinkType: 
-image: 
+category: Technology
+imageLinkType: relative
+image: /assets/artwork.jpg
 
 # iTunes Properties
-itunesType: # recommended, [episodic/serial]
-itunesSubtitle: # recommended
-itunesSummary: # recommended
-itunesAuthor: # recommended
+itunesType: episodeic # recommended, [episodic/serial]
+itunesSubtitle: A real example. # recommended
+itunesSummary: An example on how to use this Podcast-template. # recommended
+itunesAuthor: Kristof # recommended
 itunesBlock: # [yes]
-itunesCategory: # recommended
+itunesCategory: Technology # recommended
 itunesComplete: # [yes]
-itunesExplicit: # recommended, [clean/explicit]
-itunesImageLinkType: # [relative/absolute]
-itunesImage: # recommended
+itunesExplicit: clean # recommended, [clean/explicit]
+itunesImageLinkType: relative # [relative/absolute]
+itunesImage: /assets/artwork.jpg # recommended
 itunesNewFeedUrl:
-itunesOwnerName: # recommended
-itunesOwnerEmail: # recommended
+itunesOwnerName: Kristof Kocsis # recommended
+itunesOwnerEmail: appleContact@email.com # recommended
 
 # Jekyll Properties
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Other info
-email: # REQUIRED
-twitter_username: 
+email: epodcast@email.com # REQUIRED
+twitter_username:
 github_username: # A podcast usually isn't connected to Github, but since this is Jekyll, who knows.
 
 # Build settings
