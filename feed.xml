@@ -1,0 +1,208 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <atom:link href="{{ site.url }}/standardfeed.xml" rel="self" type="application/rss+xml" />
+
+    <title>{{ site.title }}</title>
+
+    <link>{{ site.url }}</link>
+
+    <description>{{ site.description }}</description>
+
+    {% if site.language %}
+    <language>{{ site.language }}</language>
+    {% endif %}
+
+    <copyright>© {{ site.time | date: '%Y' }} {{ site.title }}, All rights reserved.</copyright>
+
+    {% if site.managingEditorEmail %}
+    <managingEditor>{{ site.managingEditorEmail }}{% if site.managingEditorName %} ({{ site.managingEditorName}}){% endif %}</managingEditor>
+    {% endif %}
+
+    {% if site.webMasterEmail %}
+    <webMaster>{{ site.webMasterEmail }}{% if site.webMasterName %} ({{ site.webMasterName }}){% endif %}</webMaster>
+    {% endif %}
+
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+
+    {% if site.category %}
+    <category>{{ site.category }}</category>
+    {% endif %}
+
+    <generator>https://github.com/kristofk/podcast-template</generator>
+
+    <docs>https://github.com/kristofk/podcast-template/wiki</docs>
+    
+    {% if site.image %}
+    <image>
+    {% if site.imageLinkType == "absolute" %}
+    <url>{{ site.image }}</url>
+    {% else %}
+    <url>{{ site.url }}{{ site.image }}</url>
+    {% endif %}
+    <title>{{ site.title }}</title>
+    <link>{{ site.url }}</link>
+    </image>
+    {% endif %}
+
+    <!-- iTunes tags -->
+    {% if site.itunesType %}
+    <itunes:type>{{ site.itunesType }}</itunes:type>
+    {% endif %}
+
+    {% if site.itunesSubtitle %}
+    <itunes:subtitle>{{ site.itunesSubtitle }}</itunes:subtitle>
+    {% endif %}
+
+    {% if site.itunesSummary %}
+    <itunes:summary>{{ site.itunesSummary }}</itunes:summary>
+    {% elsif site.description %}
+    <itunes:summary>{{ site.description }}</itunes:summary>
+    {% endif %}
+
+    {% if site.itunesAuthor %}
+    <itunes:author>{{ site.itunesAuthor }}</itunes:author>  
+    {% endif %}
+
+    {% if site.itunesBlock %}
+    <itunes:block>{{ site.itunesBlock }}</itunes:block>
+    {% endif %}
+
+    {% if site.itunesCategory %}
+    <itunes:category>{{ site.itunesCategory }}</itunes:category>
+    {% elsif site.category %}
+    <itunes:category>{{ site.category }}</itunes:category>
+    {% endif %}
+
+    {% if site.itunesComplete %}
+    <itunes:complete>{{ site.itunesComplete }}</itunes:complete>
+    {% endif %}
+
+    {% if site.itunesExplicit %}
+    <itunes:explicit>{{ site.itunesExplicit }}</itunes:explicit>
+    {% endif %}
+
+    {% if site.itunesImage %}
+      {% if site.itunesImageLinkType == 'absolute' %}
+      <itunes:image href="{{ site.itunesImage }}"/>
+      {% else %}
+      <itunes:image href="{{ site.url }}{{ site.itunesImage }}"/>
+      {% endif %}
+    {% elsif site.image %}
+      {% if site.imageLinkType == "absolute" %}
+      <itunes:image href="{{ site.image }}"/>
+      {% else %}
+      <itunes:image href="{{ site.url }}{{ site.image }}"/>
+      {% endif %}
+    {% endif %}
+
+    {% if site.itunesNewFeedUrl %}
+    <itunes:new-feed-url>{{ site.itunesNewFeedUrl }}</itunes:new-feed-url>
+    {% endif %}
+
+    {% if site.itunesOwnerName %}
+    {% if site.itunesOwnerEmail %}
+    <itunes:owner>
+      <itunes:name>{{ site.itunesOwnerName }}</itunes:name>
+      <itunes:email>{{ site.itunesOwnerEmail }}</itunes:email>
+    </itunes:owner>
+    {% endif %}
+    {% endif %}
+      
+
+    {% for post in site.posts %}
+    <item>
+      {% if post.title %}
+      <title>{{ post.title  }}</title>
+      {% endif %}
+
+      <link>{{ site.url }}{{ post.url }}</link>
+
+      {% if post.description %}
+      <description>{{ post.description }}</description>
+      {% endif %}
+
+      <author>{% if post.authorEmail %}{{ post.authorEmail }}{% else %}{{ site.email }}{% endif %} ({% if post.authorName %}{{ post.authorName }}{% else %}{{ site.title }}{% endif %})</author>
+
+      {% if post.comments %}
+      <comments>{{ post.comments }}</comments>
+      {% endif %}
+
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+
+      {% if site.itunesCategory %}
+      <category>{{ site.itunesCategory }}</category>
+      {% elsif site.category%}
+      <category>{{ site.category }}</category>
+      {% endif%}
+      
+      {% if post.audioFileLinkType == 'absolute' %}
+      <enclosure url="{{ post.audioFile }}" length="{{ post.length }}" type="audio/mpeg"/>
+      {% else %}
+      <enclosure url="{{ site.url }}{{ post.audioFile }}" length="{{ post.length }}" type="audio/mpeg"/>
+      {% endif %}
+
+      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+
+      <content:encoded><![CDATA[{{ post.content }}]]></content:encoded>
+
+      <!-- iTunes tags -->
+      {% if post.itunesSubtitle %}
+      <itunes:subtitle>{{ post.itunesSubtitle }}</itunes:subtitle>
+      {% endif %}
+
+      {% if post.itunesSummary %}
+      <itunes:summary>{{ post.itunesSummary }}</itunes:summary>
+      {% endif %}
+      
+      {% if post.title %}
+      <itunes:title>{{ post.title }}</itunes:title>
+      {% endif %}
+
+      {% if post.authorName %}
+      <itunes:author>{{ post.authorName }}</itunes:author>
+      {% else %}
+      <itunes:author>{{ site.title }}</itunes:author>
+      {% endif %}
+
+      {% if post.itunesBlock %}
+      <itunes:block>{{ post.itunesBlock }}</itunes:block>
+      {% endif %}
+      
+      <itunes:duration>{{ post.duration }}</itunes:duration>
+
+      {% if post.itunesEpisode %}
+      <itunes:episode>{{ post.itunesEpisode }}</itunes:episode>
+      {% endif %}
+
+      {% if post.itunesSeason %}
+      <itunes:season>{{ post.itunesSeason }}</itunes:season>
+      {% endif %}
+
+      {% if post.itunesEpisodeType %}
+      <itunes:episodeType>{{ post.itunesEpisodeType }}</itunes:episodeType>
+      {% endif %}
+
+      {% if post.itunesExplicit %}
+      <itunes:explicit>{{ post.itunesExplicit }}</itunes:explicit>
+      {% endif %}
+
+      {% if post.itunesImage %}
+        {% if post.itunesImageLinkType == "absolute" %}
+        <itunes:image href="{{ post.itunesImage }}"/>
+        {% else %}
+        <itunes:image href="{{ site.url }}{{ post.itunesImage }}"/>
+        {% endif %}
+      {% else %}
+      <itunes:image href="{{ site.url }}/assets/artwork.jpg"/>
+      {% endif %}
+      
+    </item>
+  {% endfor %}
+  </channel>
+</rss>
