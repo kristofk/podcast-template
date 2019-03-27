@@ -23,8 +23,8 @@ itunesImageLinkType: relative
 itunesImage: /assets/artwork.jpg
 
 # Audio file properties
-audioFileLinkType: relative
-audioFile: /audio-files/1-welcome-to-the-epodcast.mp3
+audioFileLinkType: absolute
+audioFile: https://res.cloudinary.com/kristofk-com/video/upload/v1553722869/EPodcast/1-welcome-to-the-epodcast.mp3
 duration:  19:33
 length: 1173
 ---
