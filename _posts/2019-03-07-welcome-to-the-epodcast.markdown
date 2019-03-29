@@ -24,7 +24,7 @@ itunesImage: https://res.cloudinary.com/kristofk-com/image/upload/v1553722863/EP
 
 # Audio file properties
 audioFileLinkType: absolute
-audioFile: https://res.cloudinary.com/kristofk-com/video/upload/v1553722869/EPodcast/1-welcome-to-the-epodcast.mp3
+audioFile: https://www.dropbox.com/s/jevig0lcubh47vq/1-welcome-to-the-epodcast.mp3?dl=0
 duration:  19:33
 length: 1173
 ---
