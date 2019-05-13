@@ -1,46 +1,21 @@
-# Site settings
-# These are used to personalize your new site.
-# Some of these are required, optional or recommended
-# "[]" are options to choose from
-# Read more here: https://github.com/kristofk/podcast-template/wiki/Site-Properties
+# You can find more information about each property here: https://github.com/kristofk/podcast-template/wiki/Podcast-properties
 
-# RSS 2.0 Properties
-title: # REQUIRED
-description: # REQUIRED 
-language: 
-managingEditorName: 
-managingEditorEmail: 
-webMasterName: 
-webMasterEmail: 
-category: 
-imageLinkType: 
-image: 
-
-# iTunes Properties
-itunesType: # recommended, [episodic/serial]
-itunesSubtitle: # recommended
-itunesSummary: # recommended
-itunesAuthor: # recommended
-itunesBlock: # [yes]
-itunesCategory: # recommended
-itunesComplete: # [yes]
-itunesExplicit: # recommended, [clean/explicit]
-itunesImageLinkType: # [relative/absolute]
-itunesImage: # recommended
-itunesNewFeedUrl:
-itunesOwnerName: # recommended
-itunesOwnerEmail: # recommended
-
-# Jekyll Properties
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# Channel properties
+title:
+description:
+language:
+category:
+imageURL:
+itunesExplicit:
 
 # Other info
-email: # REQUIRED
-twitter_username: 
-github_username: # A podcast usually isn't connected to Github, but since this is Jekyll, who knows.
+email:
 
-# Build settings
+# Jekyll properties
+baseurl:
+url:
+
+# Build settings (only touch this if you know what you are doing)
 permalink: /episodes/:slug
 markdown: kramdown
 theme: minima
